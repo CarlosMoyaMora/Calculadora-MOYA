@@ -10,7 +10,7 @@ result = []
 error = []
 
 
-def calculadora(result, error):
+def calculator(result, error):
     
     print("_______________Calculator pymoya________________")
     print("+. Sum")
@@ -51,4 +51,4 @@ def calculadora(result, error):
 # code Start Line
 
 
-calculadora(result, error)            
+calculator(result, error)            
