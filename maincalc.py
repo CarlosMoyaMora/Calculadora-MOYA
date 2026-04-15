@@ -4,7 +4,7 @@
 
 # Version: 0.01
 
-
+import emoji
 from module import Cleaner
 
 
@@ -19,13 +19,15 @@ def Calculator(result, error):
     
     while True: #bucle infinito que mantiene la calculadora en funcionamiento
         
-        print("_______________Calculator pymoya________________")
-        print("+. Sum")
-        print("-. Resta")
-        print("+. Multiplication")
-        print("+. Division ")
-        print("C. Clear ")
-        print("AC. OFF ")
+        print("""
+█▀█ █▄█ █▀▄▀█ █▀█ █▄█ ▄▀█   █▀▀ ▄▀█ █░░ █▀▀ █░█ █░░ ▄▀█ ▀█▀ █▀█ █▀█
+█▀▀ ░█░ █░▀░█ █▄█ ░█░ █▀█   █▄▄ █▀█ █▄▄ █▄▄ █▄█ █▄▄ █▀█ ░█░ █▄█ █▀▄""")
+        print("\n ➕ . Sum")
+        print(" ➖ . Resta")
+        print(" ✖️  . Multiplication")
+        print(" ➗ . Division ")
+        print(" ©️  . Clear ")
+        print(" 📴 . OFF ")
 
         
         try: # Try para controlar los errores.
@@ -41,14 +43,14 @@ def Calculator(result, error):
                 pass
             
             if not result: #Condicion para determinar si el usuario debe ingresar un numero por primera vez en caso de que result no contenga nada
-                print(f"\nResult = 0")
+                print(f"\n 🟰   0")
                 num1 = int(input("\nDigite el numero: "))
                 Cleaner()
             else: # si result contiene algo lo mostramos como el numero uno para que se reutilize
                 
                 num1 = result
                 
-                print(f"\nResult = {result}")
+                print(f"\n🟰 {result}")
                 
             
             option_choosen = input("\nChoose an Option:   ").upper() #Esta variable almacena la opcion seleccionada por el usuario para ser utilizada
@@ -69,7 +71,7 @@ def Calculator(result, error):
                 
                 num2 = int(input("\nDigite el numero: "))
                 
-                result = num1 + num2           
+                result = num1 * num2           
             
             elif option_choosen == '/': #Condicion que ejecuta la Division
                 
@@ -78,13 +80,13 @@ def Calculator(result, error):
                 result = num1 / num2     
             
             elif option_choosen == 'C': #Condicion para colocar los resultados en 0
-                
+                if not result:
+                   result = 0
+                else:
+                   result - result[-1]   
+
+            elif option_choosen == 'OFF': #Condicion que reinicia la consola
                 result = 0
-                
-                pass
-                      
-            
-            elif option_choosen == 'AC': #Condicion que apaga la calculadora
                 
                 break
                 
