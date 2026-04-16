@@ -45,12 +45,12 @@ def Calculator(result, error):
             if not result: #Condicion para determinar si el usuario debe ingresar un numero por primera vez en caso de que result no contenga nada
                 print(f"\n 🟰   0")
                 num1 = int(input("\nDigite el numero: "))
-                Cleaner()
+                
             else: # si result contiene algo lo mostramos como el numero uno para que se reutilize
                 
                 num1 = result
                 
-                print(f"\n🟰 {result}")
+                print(f"\n 🟰  {result}")
                 
             
             option_choosen = input("\nChoose an Option:   ").upper() #Esta variable almacena la opcion seleccionada por el usuario para ser utilizada
@@ -87,7 +87,7 @@ def Calculator(result, error):
 
             elif option_choosen == 'OFF': #Condicion que reinicia la consola
                 result = 0
-                
+                Cleaner()
                 break
                 
                       
