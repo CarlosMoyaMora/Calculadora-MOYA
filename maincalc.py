@@ -2,7 +2,7 @@
 
 # Fecha: 24/02/2026
 
-# Version: 0.01
+# Version: 1.10
 
 import emoji
 from module import Cleaner
@@ -97,12 +97,12 @@ def Calculator(result, error):
                 
                 
         except ValueError: # Error que se almacena en la lista ERROR para mostrarle al usuario
-            error = 'SyntaxError'
+            error = '\n𝑺𝒚𝒏𝒕𝒂𝒙𝑬𝒓𝒓𝒐𝒓'
             Cleaner()
             
             
             
-# code Start Line
+# code Startline
 
 
 Calculator(result, error)            
